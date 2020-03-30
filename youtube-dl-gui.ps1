@@ -81,14 +81,14 @@ Function Clear-Download-List {
 
 Function Download-Musica($link) {
 	$youtubedl = '.\youtube-dl'
-	$params = "$link -i --extract-audio --audio-format mp3 --audio-quality 0 -o %(title)s-%(id)s.%(ext)s"
+	$params = "$link -i --extract-audio --audio-format mp3 --audio-quality 0 -o %userprofile%\Downloads\%(title)s-%(id)s.%(ext)s"
 	start $youtubedl $params
 }
 
 Function Download-Video($link) {
 
 	$youtubedl = '.\youtube-dl'
-	$params = "$link -f 18 -o %(title)s-%(id)s.%(ext)s"
+	$params = "$link -f 18 -o %userprofile%\Downloads\%(title)s-%(id)s.%(ext)s"
 	start $youtubedl $params
 }
 
